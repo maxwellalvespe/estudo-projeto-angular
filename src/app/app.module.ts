@@ -8,6 +8,10 @@ import { HomeComponent } from './view/home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { CardComponent } from './view/card/card.component';
+import { FormComponent } from './view/form/form.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -17,6 +21,7 @@ import { CardComponent } from './view/card/card.component';
     AppComponent,
     HomeComponent,
     CardComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,8 @@ import { CardComponent } from './view/card/card.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
   
   ],
   providers: [],

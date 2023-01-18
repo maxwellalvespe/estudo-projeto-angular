@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +10,5 @@ export class HomeComponent {
   nameButton:string ="Votar"
 
   opcoes=['SIM','NAO'];
+  @Input() dado!: {name: "tereza",cpf: "9999999"};
 }

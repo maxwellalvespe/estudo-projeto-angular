@@ -1,2 +1,21 @@
-<p>card works!</p>
-<p>{{nome}}</p>
+<div>
+    <p>{{title}}</p>
+    <b>Usuario:</b> {{userData.name.toUpperCase()}}
+    <b>Cpf: </b>{{userData.cpf}}
+    <br />
+    <b>Assunto em Pauta: </b>{{topico.descricao}}
+    <br />
+
+    <label for="codigo_enquete">Código da Enquete </label>
+    <input type="text" placeholder="01" name="codigo_enquete" id="codigo_enquete">
+    <br />
+    <label for="id_usuario">Código Usuário  </label>
+    <input type="text" name="id_usuario" id="id_usuario">
+
+    <label for="opcao"> Opções </label>
+    <select name="opcao" id="opcao">
+        <option value="SIM">{{topico.opcao[0]}}</option>
+        <option value="NAO">{{topico.opcao[1]}}</option>
+    </select>
+    <input type="button" value="Confirmar">
+</div>
