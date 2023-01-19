@@ -1,7 +1,7 @@
 <form class="example-form">
   <mat-form-field class="example-full-width">
     <mat-label>Codigo usuário</mat-label>
-    <input matInput placeholder="999999" value="999999">
+    <input matInput placeholder="999999" value="999999" >
     <textarea matInput placeholder="Informe o código do usuário ex: 0001"></textarea>
   </mat-form-field>
 
@@ -10,13 +10,14 @@
     <textarea matInput placeholder="Informe o código da enquete ex: 0001"></textarea>
   </mat-form-field>
 
-  <h4>Selecione uma das opções abaixo</h4>
-  <mat-form-field appearance="fill">
+  <mat-form-field>
     <mat-label>Opções</mat-label>
-    <mat-select [(value)]="topicos">
-      <mat-option></mat-option>
-      <mat-option [value]="option.opcao" *ngFor="let option of topicos">{{option.opcao}}</mat-option>
+    <mat-select [(value)]="selecionado">
+      <mat-option value="SIM">SIM</mat-option>
+      <mat-option value="NÃO">NÃO</mat-option>
     </mat-select>
   </mat-form-field>
-  <p>You selected: {{topicos}}</p>
+  <p>Opção selecionada: {{selecionado}}</p>
+
+  <button mat-flat-button (click)="alert()">Enviar</button>
 </form>
