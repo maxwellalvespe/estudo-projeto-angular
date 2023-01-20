@@ -1,23 +1,23 @@
-<form class="example-form">
+<form class="example-form" (ngSubmit)="print()" [formGroup]="formVotacao" #formDir="ngForm">
   <mat-form-field class="example-full-width">
     <mat-label>Codigo usuário</mat-label>
-    <input matInput placeholder="999999" value="999999" >
-    <textarea matInput placeholder="Informe o código do usuário ex: 0001"></textarea>
+    <input matInput placeholder="999999" value="999999" formControlName="idUsuario" required  [(ngModel)]="idUsuario">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Codigo enquete</mat-label>
-    <textarea matInput placeholder="Informe o código da enquete ex: 0001"></textarea>
-  </mat-form-field>
+    <input matInput formControlName="idEnquete" required [(ngModel)]="idEnquete">
+    </mat-form-field>
 
   <mat-form-field>
     <mat-label>Opções</mat-label>
-    <mat-select [(value)]="selecionado">
+    <mat-select [(value)]="selecionado" formControlName="selecionado">
       <mat-option value="SIM">SIM</mat-option>
       <mat-option value="NÃO">NÃO</mat-option>
     </mat-select>
   </mat-form-field>
   <p>Opção selecionada: {{selecionado}}</p>
 
-  <button mat-flat-button (click)="alert()">Enviar</button>
+  <input matInput id="segundaFormaDeObterOValorDoInput" placeholder="campo utilizado para recuperar o valor no TS via ViewChild" #segundaFormaDeObterOValorDoInput>
+  <button mat-flat-button >Enviar</button>
 </form>
