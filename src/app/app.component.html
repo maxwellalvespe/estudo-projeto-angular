@@ -1,3 +1,9 @@
 <app-home></app-home>
 <!-- <app-card [userData]="dado" [title]="title" [topico]="topico"></app-card> -->
 <app-form></app-form>
+
+<button (click)="getUsers()">CHAMANDO API</button>
+
+<div *ngFor="let usuario of users">
+    <p (click)="selected(usuario)">{{usuario.id}} | {{usuario.nome}} |{{usuario.idade}} </p>
+</div>
